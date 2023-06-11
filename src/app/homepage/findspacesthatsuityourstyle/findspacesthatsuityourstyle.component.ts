@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Subscription } from 'rxjs';
 import { NotificationType } from 'src/app/enum/notification-type.enum';
@@ -29,16 +30,34 @@ export class FindspacesthatsuityourstyleComponent implements OnInit {
   houseType12: string = "Town Houses";
   houseType13: string = "Villas";
 
+  private subscriptions: Subscription[] = [];
+  properties: Property[] = [];
 
 
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute, private propertyService: PropertyService) { }
 
   ngOnInit(): void {
 
-
   }
 
+
+  getAllProperty(): void {
+
+    this.subscriptions.push(
+
+      this.propertyService.getAllProperties().subscribe(
+        (response: Property[]) => {
+          this.propertyService.addAllPropertiesToLocalCache(response);
+          
+        },
+        (errorResponse: HttpErrorResponse) => {
+          //this.sendNotification(NotificationType.ERROR, errorResponse.error.message);
+
+        }
+      )
+    );
+  }
 
 
   customOptions: OwlOptions = {

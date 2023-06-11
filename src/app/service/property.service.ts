@@ -72,6 +72,10 @@ export class PropertyService {
     localStorage.setItem('properties', JSON.stringify(properties));
   }
 
+  public addAllPropertiesToLocalCache(allProperties: Property[]): void {
+    localStorage.setItem('allProperty', JSON.stringify(allProperties));
+  }
+
   public addPropertiesToLocalCacheAdmin(properties: Property[]): void {
     localStorage.setItem('Allproperties', JSON.stringify(properties));
   }

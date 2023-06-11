@@ -7,223 +7,203 @@
     <div class="row">
         <div class="col-md-8">
             <div class="row">
-                <div class="col-sm-12 my-4">
+                <div class="colsm-12">
                     <h1 class="my-3">{{property.name}}</h1>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 my-4">
 
                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                                class="active" aria-current="true" aria-label="Slide 1"
+                                [hidden]="!property.image1"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
+                                aria-label="Slide 2" [hidden]="!property.image2"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                                aria-label="Slide 3" [hidden]="!property.image3"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
+                                aria-label="Slide 4" [hidden]="!property.image4"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4"
-                                aria-label="Slide 5"></button>
+                                aria-label="Slide 5" [hidden]="!property.image5"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="5"
-                                aria-label="Slide 6"></button>
+                                aria-label="Slide 6" [hidden]="!property.image6"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="6"
-                                aria-label="Slide 7"></button>
+                                aria-label="Slide 7" [hidden]="!property.image7"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="7"
-                                aria-label="Slide 8"></button>
+                                aria-label="Slide 8" [hidden]="!property.image8"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="8"
-                                aria-label="Slide 9"></button>
+                                aria-label="Slide 9" [hidden]="!property.image9"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="9"
-                                aria-label="Slide 10"></button>
+                                aria-label="Slide 10" [hidden]="!property.image10"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="10"
-                                aria-label="Slide 11"></button>
+                                aria-label="Slide 11" [hidden]="!property.image11"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="11"
-                                aria-label="Slide 12"></button>
+                                aria-label="Slide 12" [hidden]="!property.image12"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="12"
-                                aria-label="Slide 13"></button>
+                                aria-label="Slide 13" [hidden]="!property.image13"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="13"
-                                aria-label="Slide 14"></button>
+                                aria-label="Slide 14" [hidden]="!property.image14"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="14"
-                                aria-label="Slide 15"></button>
+                                aria-label="Slide 15" [hidden]="!property.image15"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="15"
-                                aria-label="Slide 16"></button>
+                                aria-label="Slide 16" [hidden]="!property.image16"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="16"
-                                aria-label="Slide 17"></button>
+                                aria-label="Slide 17" [hidden]="!property.image17"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="17"
-                                aria-label="Slide 18"></button>
+                                aria-label="Slide 18" [hidden]="!property.image18"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="18"
-                                aria-label="Slide 19"></button>
+                                aria-label="Slide 19" [hidden]="!property.image19"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="19"
-                                aria-label="Slide 20"></button>
+                                aria-label="Slide 20" [hidden]="!property.image20"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="20"
-                                aria-label="Slide 21"></button>
+                                aria-label="Slide 21" [hidden]="!property.image21"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="21"
-                                aria-label="Slide 22"></button>
+                                aria-label="Slide 22" [hidden]="!property.image22"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="22"
-                                aria-label="Slide 23"></button>
+                                aria-label="Slide 23" [hidden]="!property.image23"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="23"
-                                aria-label="Slide 24"></button>
+                                aria-label="Slide 24" [hidden]="!property.image24"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="24"
-                                aria-label="Slide 25"></button>
+                                aria-label="Slide 25" [hidden]="!property.image25"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="25"
-                                aria-label="Slide 26"></button>
+                                aria-label="Slide 26" [hidden]="!property.image26"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="26"
-                                aria-label="Slide 27"></button>
+                                aria-label="Slide 27" [hidden]="!property.image27"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="27"
-                                aria-label="Slide 28"></button>
+                                aria-label="Slide 28" [hidden]="!property.image28"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="28"
-                                aria-label="Slide 29"></button>
+                                aria-label="Slide 29" [hidden]="!property.image29"></button>
                             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="29"
-                                aria-label="Slide 30"></button>
+                                aria-label="Slide 30" [hidden]="!property.image30"></button>
                         </div>
 
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
+
+                            <div *ngIf="property.image1" class="carousel-item active" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_1{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+
+                            <div *ngIf="property.image2" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_2{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+
+                            <div *ngIf="property.image3" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_3{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+
+                            <div *ngIf="property.image4" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_4{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image5" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_5{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image6" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_6{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image7" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_7{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image8" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_8{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image9" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_9{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image10" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_10{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image11" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_11{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image12" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_12{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image13" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_13{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image14" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_14{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image15" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_15{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image16" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_16{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image17" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_17{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image18" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_18{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image19" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_19{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image20" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_20{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image21" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_21{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image22" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_22{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image23" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_23{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image24" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_24{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image25" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_25{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image26" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_26{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image27" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_27{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image28" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_28{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item" data-bs-interval="10000">
+                            <div *ngIf="property.image29" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_29{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
-                            <div class="carousel-item">
+                            <div *ngIf="property.image30" class="carousel-item" data-bs-interval="10000">
                                 <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_30{{property.name}}{{property.id}}.jpg"
-                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;"
-                                    alt="Property Image">
+                                    class="d-block w-100" style="max-height: 400px; max-width: 100%;" alt="">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -249,10 +229,21 @@
             </div>
 
             <div class="row my-4">
-                <div class="col-md-12">
+                <div class="col-sm-12">
                     <h2><b>About the rental</b></h2>
-
                     <hr />
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col-sm-12">
+                    <p>{{property.description}}</p>
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col-md-12">
+
                     <div class="row my-2">
                         <h3
                             [hidden]="property.theSpace_noOfAccommodation.length==0 && property.theSpace_noOfBedrooms.length==0">

@@ -46,13 +46,45 @@ export class Property {
     public amenities_toaster: string;
     public amenities_coffeeMaker: string;
     public amenities_stove: string;
+    public description: string;
+    public image1: boolean;
+    public image2: boolean;
+    public image3: boolean;
+    public image4: boolean;
+    public image5: boolean;
+    public image6: boolean;
+    public image7: boolean;
+    public image8: boolean;
+    public image9: boolean;
+    public image10: boolean;
+    public image11: boolean;
+    public image12: boolean;
+    public image13: boolean;
+    public image14: boolean;
+    public image15: boolean;
+    public image16: boolean;
+    public image17: boolean;
+    public image18: boolean;
+    public image19: boolean;
+    public image20: boolean;
+    public image21: boolean;
+    public image22: boolean;
+    public image23: boolean;
+    public image24: boolean;
+    public image25: boolean;
+    public image26: boolean;
+    public image27: boolean;
+    public image28: boolean;
+    public image29: boolean;
+    public image30: boolean;
+
 
 
 
 
 
     constructor() {
-        this.id=0;
+        this.id = 0;
         this.name = "";
         this.propertyType = "";
         this.propertyPrice = 0;
@@ -94,6 +126,38 @@ export class Property {
         this.amenities_toaster = "";
         this.amenities_coffeeMaker = "";
         this.amenities_stove = "";
+        this.description = "";
+        this.image1 = false;
+        this.image2 = false;
+        this.image3 = false;
+        this.image4 = false;
+        this.image5 = false;
+        this.image6 = false;
+        this.image7 = false;
+        this.image8 = false;
+        this.image9 = false;
+        this.image10 = false;
+        this.image11 = false;
+        this.image12 = false;
+        this.image13 = false;
+        this.image14 = false;
+        this.image15 = false;
+        this.image16 = false;
+        this.image17 = false;
+        this.image18 = false;
+        this.image19 = false;
+        this.image20 = false;
+        this.image21 = false;
+        this.image22 = false;
+        this.image23 = false;
+        this.image24 = false;
+        this.image25 = false;
+        this.image26 = false;
+        this.image27 = false;
+        this.image28 = false;
+        this.image29 = false;
+        this.image30 = false;
+
 
     }
 

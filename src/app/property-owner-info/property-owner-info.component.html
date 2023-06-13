@@ -17,7 +17,7 @@
                                         <div class="mx-auto" style="width: 140px;">
                                             <div class="d-flex justify-content-center align-items-center rounded"
                                                 style="height: 140px; background-color: rgb(233, 236, 239);">
-                                                <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp-profileImage-{{user?.firstname}}{{user?.lastname}}{{user?.userId}}.jpg"
+                                                <img src="https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp-profileImage-{{user.firstname}}{{user.lastname}}{{user.userId}}.jpg"
                                                     class="img-fluid" />
                                             </div>
                                         </div>
@@ -42,10 +42,10 @@
                                                 [hidden]="!user?.isVerified">Verified</small>
                                             <small class="badge bg-danger"
                                                 [hidden]="user?.isVerified">Unverified</small>
-                                            <div class="text-muted">
+                                            <!-- <div class="text-muted">
                                                 <small>Joined {{user?.dateJoined |
                                                     date:'mediumDate'}}</small>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>

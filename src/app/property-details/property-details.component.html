@@ -355,7 +355,7 @@
                 </div>
             </div>
 
-            <div class="row my-4">
+            <!--  <div class="row my-4">
                 <div class="col-sm-12">
                     <div *ngIf="property.propertyState == 'Alabama'">
                         <iframe
@@ -672,7 +672,7 @@
 
                 </div>
             </div>
-
+            -->
 
             <div class="row">
                 <div class="col-sm-12 custom-text-fix">
@@ -816,7 +816,8 @@
                             </tr>
                             <tr>
                                 <td colspan="2"><button class="form-control property-details-button-fix" type="button"
-                                        (click)="onCheckPropertyAvailability()" [disabled]="showLoading">
+                                        [hidden]="showPropertyPricesTable" (click)="onCheckPropertyAvailability()"
+                                        [disabled]="showLoading">
                                         <i class="fa fa-spinner fa-spin " *ngIf="showLoading "></i>&nbsp;&nbsp;
                                         <span *ngIf="showLoading===true ">Loading...</span> <span
                                             *ngIf="showLoading !==true ">Check</span>
@@ -825,8 +826,10 @@
                         </table>
                     </div>
 
+                    <hr class="mt-4" [hidden]="!showPropertyPricesTable" />
                     <table class="table table-borderless table-responsive my-4" [hidden]="!showPropertyPricesTable"
                         style="color:inherit;">
+
                         <tr>
                             <td><b>{{property.propertyPrice | currency}} X {{noOfDays}} days</b></td>
                             <td>{{property.propertyPrice * noOfDays | currency}}</td>

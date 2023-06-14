@@ -18,8 +18,6 @@
                     <div class="row mx-2 my-3">
 
                         <div class="col-sm-6">
-                            <p>Check-In</p>
-
                             <input class="form-control fa" [min]="currentDate | date:'yyyy-MM-dd'"
                                 [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3" [(ngModel)]="searchBarCheckInDate"
                                 placeholder="&#xF274; Check-in" required>
@@ -29,7 +27,6 @@
                         </div>
                         <div class="col-sm-6">
 
-                            <p>Check-Out</p>
                             <input class="form-control fa" [min]="currentDate | date:'yyyy-MM-dd'"
                                 [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4" [(ngModel)]="searchBarCheckOutDate"
                                 placeholder="&#xF274; Check-out" required>
@@ -42,11 +39,11 @@
                     <div class="row mx-2 my-3">
                         <div class="col-sm-3">
 
-                            <input type="text" placeholder="&#xF2C0; Guest" class="form-control fa" />
+                            <input type="text" placeholder="&#xF2C0; No of Guest" class="form-control fa" />
                         </div>
                         <div class="col-sm-3">
 
-                            <input type="text" placeholder="&#xf1ae; Children" class="form-control fa" />
+                            <input type="text" placeholder="&#xf1ae; No of Children" class="form-control fa" />
                         </div>
                         <div class="col-sm-2">
 

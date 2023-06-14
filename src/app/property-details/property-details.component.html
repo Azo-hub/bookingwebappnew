@@ -780,7 +780,6 @@
                             [hidden]="!showPropertyAvailabilityTable">
                             <tr>
                                 <td>
-                                    <span>Check-In</span><br />
                                     <input class="form-control fa mb-4" [(ngModel)]="checkInDate"
                                         placeholder="&#xF274; Check-in" required [min]="currentDate | date:'yyyy-MM-dd'"
                                         [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4">
@@ -788,7 +787,6 @@
 
                                 </td>
                                 <td>
-                                    <span>Check-Out</span><br />
                                     <input class="form-control fa mb-4" [(ngModel)]="checkOutDate"
                                         placeholder="&#xF274; Check-out" required
                                         [min]="currentDate | date:'yyyy-MM-dd'" [owlDateTimeTrigger]="dt5"
@@ -799,12 +797,12 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span>No of Guest</span><br />
-                                    <input type="text " [(ngModel)]="noOfGuest" class="form-control mb-4" />
+                                    <input type="text " placeholder="&#xF2C0; No of Guest" [(ngModel)]="noOfGuest"
+                                        class="form-control fa mb-4" />
                                 </td>
                                 <td>
-                                    <span>No of Children</span><br />
-                                    <input type="text" [(ngModel)]="noOfChildren" class="form-control mb-4" />
+                                    <input type="text" placeholder="&#xf1ae; No of Children" [(ngModel)]="noOfChildren"
+                                        class="form-control fa mb-4" />
                                 </td>
                             </tr>
                             <tr>

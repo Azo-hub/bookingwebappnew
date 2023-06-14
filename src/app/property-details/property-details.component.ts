@@ -110,9 +110,11 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
 
   onCheckPropertyAvailability(): void {
     this.showLoading = true;
+    let trnaformedCheckInDate = this.datePipe.transform(this.checkInDate, 'yyyy-MM-dd');
+    let trnaformedCheckOutDate = this.datePipe.transform(this.checkOutDate, 'yyyy-MM-dd');
     const formData = new FormData();
-    formData.append("checkInDate", this.checkInDate);
-    formData.append("checkOutDate", this.checkOutDate);
+    formData.append("checkInDate", trnaformedCheckInDate);
+    formData.append("checkOutDate", trnaformedCheckOutDate);
     formData.append("propertyId", this.property.id.toString());
     // console.log(checkInAndOutDate.checkInDate.value.toString());
     //console.log(checkInAndOutDate.checkOutDate.toString());

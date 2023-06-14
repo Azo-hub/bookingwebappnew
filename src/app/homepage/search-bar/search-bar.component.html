@@ -20,23 +20,20 @@
                         <div class="col-sm-6">
                             <p>Check-In</p>
 
-                            <label>
-                                Date
-                                <input [min]="currentDate" [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3">
-                                <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
-                            </label>
+                            <input class="form-control fa" [min]="currentDate | date:'yyyy-MM-dd'"
+                                [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3" [(ngModel)]="searchBarCheckInDate"
+                                placeholder="&#xF274; Check-in" required>
+                            <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
 
-                            <!--<input type="date" class="form-control fa" [(ngModel)]="searchBarCheckInDate"
-                                min="{{currentDate | date:'yyyy-MM-dd'}}" placeholder="&#xF274; Check-in" required /> -->
 
                         </div>
                         <div class="col-sm-6">
 
                             <p>Check-Out</p>
-                            <!--    <input id="searchBarCheckout" class="form-control fa" [(ngModel)]="searchBarCheckOutDate" [owlDateTime]="searchBarDateSingle1" [owlDateTimeTrigger]="searchBarDateSingle1" placeholder="&#xF274; Check-out" required>
-                                    <owl-date-time #searchBarDateSingle1></owl-date-time> -->
-                            <!-- <input type="date" class="form-control fa" [(ngModel)]="searchBarCheckOutDate"
-                                min="{{currentDate | date:'yyyy-MM-dd'}}" placeholder="&#xF274; Check-out" required /> -->
+                            <input class="form-control fa" [min]="currentDate | date:'yyyy-MM-dd'"
+                                [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4" [(ngModel)]="searchBarCheckOutDate"
+                                placeholder="&#xF274; Check-out" required>
+                            <owl-date-time [pickerType]="'calendar'" #dt4></owl-date-time>
 
                         </div>
 

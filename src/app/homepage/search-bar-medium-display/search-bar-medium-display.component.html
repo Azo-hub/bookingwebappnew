@@ -17,16 +17,22 @@
     <div class="row my-3">
         <div class="col-sm-12">
             <span>Check-In</span><br />
-            <input type="date" class="form-control fa" [(ngModel)]="searchBarMediumCheckInDate"
-                min="{{currentDate | date:'yyyy-MM-dd'}}" placeholder="&#xF274; Check-in" required />
+            <label>
+                Date
+                <input [min]="currentDate" [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3">
+                <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
+            </label>
+
+            <!--  <input type="date" class="form-control fa" [(ngModel)]="searchBarMediumCheckInDate"
+                min="{{currentDate | date:'yyyy-MM-dd'}}" placeholder="&#xF274; Check-in" required /> -->
 
         </div>
     </div>
     <div class="row my-3">
         <div class="col-sm-12">
             <span>Check-Out</span>
-            <input type="date" class="form-control fa" [(ngModel)]="searchBarMediumCheckOutDate"
-                min="{{currentDate | date:'yyyy-MM-dd'}}" placeholder="&#xF274; Check-out" required />
+            <!-- <input type="date" class="form-control fa" [(ngModel)]="searchBarMediumCheckOutDate"
+                min="{{currentDate | date:'yyyy-MM-dd'}}" placeholder="&#xF274; Check-out" required /> -->
         </div>
     </div>
     <div class="row my-3">

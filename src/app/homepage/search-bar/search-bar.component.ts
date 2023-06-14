@@ -6,6 +6,7 @@ import { NotificationService } from 'src/app/service/notification.service';
 import { PropertyService } from 'src/app/service/property.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AuthenticationService } from 'src/app/service/authentication.service';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class SearchBarComponent implements OnInit, OnDestroy {
 
 
   constructor(private propertyService: PropertyService, private authenticationService: AuthenticationService,
-    private notificationService: NotificationService) { }
+    private datePipe: DatePipe, private notificationService: NotificationService) { }
 
   ngOnInit(): void {
 
@@ -36,13 +37,13 @@ export class SearchBarComponent implements OnInit, OnDestroy {
       this.sendNotification(NotificationType.ERROR, "You need to login to continue");
     } else {
 
+      let transformedSearchBarCheckInDate = this.datePipe.transform(this.searchBarCheckInDate, 'yyyy-MM-dd');
+      let transformedSearchBarCheckOutDate = this.datePipe.transform(this.searchBarCheckOutDate, 'yyyy-MM-dd');
 
       this.searchBarShowLoading = true;
-      console.log(this.searchBarCheckInDate);
-      console.log(this.searchBarCheckOutDate);
       const formData = new FormData();
-      formData.append("checkInDate", this.searchBarCheckInDate);
-      formData.append("checkOutDate", this.searchBarCheckOutDate);
+      formData.append("checkInDate", transformedSearchBarCheckInDate);
+      formData.append("checkOutDate", transformedSearchBarCheckOutDate);
       // formData.append("propertyId" , this.property.id.toString());
 
       this.subscriptions.push(

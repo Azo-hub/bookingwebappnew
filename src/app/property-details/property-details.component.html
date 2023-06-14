@@ -758,7 +758,7 @@
                 </div>
             </div>
 
-            
+
 
             <div class="row">
                 <div class="col-sm-12">
@@ -780,20 +780,20 @@
                             [hidden]="!showPropertyAvailabilityTable">
                             <tr>
                                 <td>
-
                                     <span>Check-In</span><br />
-
-                                    <input type="date" class="form-control fa mb-4" [(ngModel)]="checkInDate"
-                                        min="{{currentDate | date:'yyyy-MM-dd'}}" placeholder="&#xF274; Check-in"
-                                        required />
+                                    <input class="form-control fa mb-4" [(ngModel)]="checkInDate"
+                                        placeholder="&#xF274; Check-in" required [min]="currentDate | date:'yyyy-MM-dd'"
+                                        [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4">
+                                    <owl-date-time [pickerType]="'calendar'" #dt4></owl-date-time>
 
                                 </td>
                                 <td>
-
                                     <span>Check-Out</span><br />
-                                    <input type="date" class="form-control fa mb-4" [(ngModel)]="checkOutDate"
-                                        min="{{currentDate | date:'yyyy-MM-dd'}}" placeholder="&#xF274; Check-out"
-                                        required />
+                                    <input class="form-control fa mb-4" [(ngModel)]="checkOutDate"
+                                        placeholder="&#xF274; Check-out" required
+                                        [min]="currentDate | date:'yyyy-MM-dd'" [owlDateTimeTrigger]="dt5"
+                                        [owlDateTime]="dt5">
+                                    <owl-date-time [pickerType]="'calendar'" #dt5></owl-date-time>
 
                                 </td>
                             </tr>

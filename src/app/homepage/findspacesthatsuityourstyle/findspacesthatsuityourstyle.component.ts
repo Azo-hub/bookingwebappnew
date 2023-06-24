@@ -20,15 +20,15 @@ export class FindspacesthatsuityourstyleComponent implements OnInit {
   houseType2: string = "bungalows";
   houseType3: string = "cabins";
   houseType4: string = "caravans";
-  houseType5: string = "Condos-Apartments";
-  houseType6: string = "Cottages";
-  houseType7: string = "Farm Houses";
-  houseType8: string = "Guest Houses";
-  houseType9: string = "Hotels";
-  houseType10: string = "Lodges";
-  houseType11: string = "Resorts";
-  houseType12: string = "Town Houses";
-  houseType13: string = "Villas";
+  houseType5: string = "condos-apartments";
+  houseType6: string = "cottages";
+  houseType7: string = "farm houses";
+  houseType8: string = "guest houses";
+  houseType9: string = "hotels";
+  houseType10: string = "lodges";
+  houseType11: string = "resorts";
+  houseType12: string = "town houses";
+  houseType13: string = "villas";
 
   private subscriptions: Subscription[] = [];
   properties: Property[] = [];
@@ -49,7 +49,7 @@ export class FindspacesthatsuityourstyleComponent implements OnInit {
       this.propertyService.getAllProperties().subscribe(
         (response: Property[]) => {
           this.propertyService.addAllPropertiesToLocalCache(response);
-          
+
         },
         (errorResponse: HttpErrorResponse) => {
           //this.sendNotification(NotificationType.ERROR, errorResponse.error.message);

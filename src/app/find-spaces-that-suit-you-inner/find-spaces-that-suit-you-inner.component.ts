@@ -32,10 +32,10 @@ export class FindSpacesThatSuitYouInnerComponent implements OnInit, OnDestroy {
 
 
   getAllPropertyByCategory(): void {
-    if (!this.authenticationService.isUserLoggedIn()) {
+    /*if (!this.authenticationService.isUserLoggedIn()) {
       this.sendNotification(NotificationType.ERROR, "You need to login to continue");
       this.router.navigateByUrl("/travellerLogin");
-    }
+    }*/
     const formData = new FormData();
     formData.append("propertyType", this.allhousesType);
     this.subscriptions.push(

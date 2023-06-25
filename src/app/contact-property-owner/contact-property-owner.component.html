@@ -6,8 +6,8 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h1>Contact Owner</h1>
-            <h2><b>Property:</b> {{propertyName}}</h2>
+            <h2>Contact Owner</h2>
+            <h3><b>Property:</b> {{propertyName}}</h3>
             <form #contactPropertyOwnerForm="ngForm" (ngSubmit)="onContactPropertyOwner(contactPropertyOwnerForm)">
                 <div class="row my-4 gy-4">
                     <div class="col-md-6">
@@ -41,9 +41,10 @@
                 </div>
 
                 <div class="row my-4">
-                    <div class="col-md-12 form-group">
-                        <label>Your Enquiries</label>
-                        <textarea required rows="10" class="form-control" name="problemInView" ngModel></textarea>
+                    <div class="col-md-12">
+
+                        <textarea placeholder="Your Enquiries" required rows="10" class="form-control"
+                            name="problemInView" ngModel></textarea>
                     </div>
                 </div>
 
@@ -51,7 +52,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <button type="submit" class="form-control support-button-fix">
+                        <button type="submit" class="form-control contact-property-owner-button-fix">
                             <i class="fa fa-spinner fa-spin " *ngIf="contactPropertyOwnerRefreshing"></i>&nbsp;&nbsp;
                             <span *ngIf="contactPropertyOwnerRefreshing === true">Loading...</span> <span
                                 *ngIf="contactPropertyOwnerRefreshing !==true">Submit</span>

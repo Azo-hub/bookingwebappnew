@@ -20,8 +20,8 @@ export class ContactPropertyOwnerComponent implements OnInit {
   contactPropertyOwnerRefreshing: boolean = false;
   user: User = new User;
   private subscriptions: Subscription[] = [];
-  ownerUsername: string = "";
-  propertyName: string = "";
+  ownerUsername: string;
+  propertyName: string;
 
   constructor(private userService: UserService, private authenticationService: AuthenticationService,
     private activatedRoute: ActivatedRoute, private notificationService: NotificationService) { }

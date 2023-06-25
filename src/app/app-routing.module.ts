@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: "travellerLogin", component: TravellerLoginComponent },
   { path: "findSpacesThatSuitYouInner/:category", component: FindSpacesThatSuitYouInnerComponent },
   { path: "forgetpassword", component: ForgetPasswordComponent },
-  { path: "propertydetails/:id", component: PropertyDetailsComponent, canActivate: [AuthenticationGuard] },
+  { path: "propertydetails/:id", component: PropertyDetailsComponent },
   { path: "edit/property/:id", component: EditPropertyComponent, canActivate: [AuthenticationOwnerGuard, RoleOwnerGuard] },
   { path: "addNewProperty", component: AddPropertyDetailsOwnerComponent, canActivate: [AuthenticationOwnerGuard, RoleOwnerGuard] },
   { path: "listing2", component: ListingProperty2Component },
@@ -44,7 +44,7 @@ const routes: Routes = [
   { path: "userProfile", component: UserProfileComponent, canActivate: [AuthenticationGuard] },
   { path: "orderCompleted", component: OrderDetailsComponent, canActivate: [AuthenticationTravellerGuard, RoleTravellerGuard] },
   { path: "userdetails/:username", component: EditUserComponent, canActivate: [AuthenticationOwnerGuard, RoleAdminGuard] },
-  { path: "support", component: SupportComponent, canActivate: [AuthenticationTravellerGuard, AuthenticationOwnerGuard] },
+  { path: "support", component: SupportComponent },
   { path: "orderDetails/:id", component: OrderDetailsComponent, canActivate: [AuthenticationGuard] },
   { path: "propertyOwnerInfo/:username", component: PropertyOwnerInfoComponent },
   { path: "contactPropertyOwner/:username/:name", component: ContactPropertyOwnerComponent }

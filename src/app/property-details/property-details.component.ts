@@ -12,6 +12,7 @@ import { PropertyService } from '../service/property.service';
 import { DatePipe } from '@angular/common';
 import { Review } from '../model/review';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Meta } from '@angular/platform-browser';
 
 
 
@@ -40,6 +41,7 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
   showBookNowButton: boolean = false;
   reviews: Review[] = [];
   currentDate: Date = new Date();
+  meta: Meta;
 
 
 
@@ -54,6 +56,20 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
 
     this.getEachProperty();
     this.getAllReviewsByProperty(this.propertyId);
+
+
+    this.meta.updateTag({ property: "og:image:type", content: "image/jpg" });
+    this.meta.updateTag({ property: "og:image:width", content: "1024" });
+    this.meta.updateTag({ property: "og:image:height", content: "1024" });
+    this.meta.updateTag({ property: "og:type", content: "website" });
+    this.meta.updateTag({ property: "og:locale", content: "en" });
+    this.meta.updateTag({ property: 'og:site_name', content: "Valence Direct Booking Rentals | Book your vacation rentals: beach houses, cabins, condos &amp; more" });
+    this.meta.updateTag({ property: 'og:title', content: "Book your vacation rentals: beach houses, cabins, condos &amp; more | Valence Direct Booking Rentals" });
+    this.meta.updateTag({ property: 'og:description', content: "Book your vacation rentals: beach houses, cabins, condos &amp; more" });
+    this.meta.updateTag({
+      property: 'og:image', content: "https://www.valencedirectbookingrentals.com/assets/customImage/vrbo_getInspired4.jpg"
+    });
+
   }
 
   getEachProperty(): void {
@@ -147,6 +163,8 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     this.router.navigateByUrl(`/contactPropertyOwner/${this.property.propertyOwner.username}/${this.property.name}`);
 
   }
+
+
 
 
   private sendNotification(notificationType: NotificationType, message: string) {

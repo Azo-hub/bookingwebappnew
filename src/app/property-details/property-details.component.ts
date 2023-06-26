@@ -67,7 +67,7 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     this.meta.updateTag({ property: 'og:title', content: "Book your vacation rentals: beach houses, cabins, condos &amp; more | Valence Direct Booking Rentals" });
     this.meta.updateTag({ property: 'og:description', content: "Book your vacation rentals: beach houses, cabins, condos &amp; more" });
     this.meta.updateTag({
-      property: 'og:image', content: "https://www.valencedirectbookingrentals.com/assets/customImage/vrbo_getInspired4.jpg"
+      property: 'og:image', content: "https://www.valencedirectbookingrentals.com/assets/customImage/bookingLogo.jpeg"
     });
 
   }

@@ -41,6 +41,9 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
   showBookNowButton: boolean = false;
   reviews: Review[] = [];
   currentDate: Date = new Date();
+  ogImageUrl: string = "";
+  ogDescription: string = "";
+  ogTitle: string = "";
 
 
 
@@ -55,14 +58,16 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
 
     this.getEachProperty();
     this.getAllReviewsByProperty(this.propertyId);
+    this.ogImageUrl = `https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_1${this.property.name}${this.property.id}.jpg`
+    this.ogDescription = `${this.property.propertyType}-Book your vacation rentals: beach houses, cabins, condos &amp; more`
+    this.ogTitle = `${this.property.name}`
 
-
-    this.meta.updateTag({ property: 'og:title', content: `${this.property.name}` });
-    this.meta.updateTag({ property: "og:description", content: `${this.property.propertyType}-Book your vacation rentals: beach houses, cabins, condos &amp; more` });
-    this.meta.updateTag({ property: 'og:image', content: `https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_1${this.property.name}${this.property.id}.jpg` });
+    this.meta.updateTag({ property: 'og:title', content: this.ogTitle });
+    this.meta.updateTag({ property: "og:description", content: this.ogDescription });
+    this.meta.updateTag({ property: 'og:image', content: this.ogImageUrl });
     this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` });
 
-    console.log(`https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_1${this.property.name}${this.property.id}.jpg`)
+
   }
 
   getEachProperty(): void {

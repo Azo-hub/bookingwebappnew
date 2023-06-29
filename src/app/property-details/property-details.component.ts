@@ -41,13 +41,13 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
   showBookNowButton: boolean = false;
   reviews: Review[] = [];
   currentDate: Date = new Date();
-  meta: Meta;
+  
 
 
 
   constructor(private activatedRoute: ActivatedRoute,
     private propertyService: PropertyService, private datePipe: DatePipe,
-    private router: Router, private notificationService: NotificationService) { }
+    private router: Router, private notificationService: NotificationService, private meta: Meta) { }
 
   ngOnInit(): void {
 

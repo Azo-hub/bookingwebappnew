@@ -56,14 +56,14 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     this.getEachProperty();
     this.getAllReviewsByProperty(this.propertyId);
 
-    this.meta.updateTag({ property: "og:type", content: "website" });
+  /*  this.meta.updateTag({ property: "og:type", content: "website" });
     this.meta.updateTag({ property: "og:site_name", content: "Valence Direct Booking Rentals" });
     this.meta.updateTag({ property: 'og:title', content: `${this.property.name}` });
     this.meta.updateTag({ property: "og:description", content: `${this.property.propertyType}-Book your vacation rentals: beach houses, cabins, condos &amp; more` });
-    /* this.meta.updateTag({ property: 'og:image', content: `https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_1${this.property.name}${this.property.id}.jpg` });*/
+     this.meta.updateTag({ property: 'og:image', content: `https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_1${this.property.name}${this.property.id}.jpg` });
     this.meta.updateTag({ property: 'og:image', content: "https://www.valencedirectbookingrentals.com/assets/customImage/vrbo_getInspired3_og.jpg" });
     this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` });
-    this.meta.updateTag({ property: "og:image:type", content: "image/jpg" });
+    this.meta.updateTag({ property: "og:image:type", content: "image/jpg" }); */
 
   }
 

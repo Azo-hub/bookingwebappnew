@@ -62,11 +62,11 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     this.ogDescription = `${this.property.propertyType}` + "-Book your vacation rentals: beach houses, cabins, condos &amp; more";
     this.ogTitle = `${this.property.name}`;
 
-    this.meta.addTag({ property: 'og:title', content: this.ogTitle });
-    this.meta.addTag({ property: "og:description", content: this.ogDescription });
-    this.meta.addTag({ property: 'og:image', content: this.ogImageUrl });
-    this.meta.addTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` });
-    console.log(this.ogImageUrl);
+    this.meta.updateTag({ property: 'og:title', content: this.ogTitle });
+    this.meta.updateTag({ property: "og:description", content: this.ogDescription });
+    this.meta.updateTag({ property: 'og:image', content: this.ogImageUrl });
+    this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` });
+    this.meta.updateTag({ content: 'Angular 4 meta service' }, 'name="description"');
 
   }
 

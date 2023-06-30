@@ -52,15 +52,6 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     private propertyService: PropertyService, private datePipe: DatePipe,
     private router: Router, private notificationService: NotificationService, private meta: Meta) {
 
-    const ogTitle: MetaDefinition = {
-      name: "og:title",
-      content: this.ogTitle
-    }
-    const ogImageUrl: MetaDefinition = {
-      name: "og:image",
-      content: this.ogImageUrl
-    }
-    this.meta.addTags([ogTitle, ogImageUrl]);
   }
 
   ngOnInit(): void {
@@ -72,6 +63,16 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     this.ogImageUrl = "https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/q_50/bookingwebapp_1" + `${this.property.name}${this.property.id}` + ".jpg";
     this.ogDescription = `${this.property.propertyType}` + "-Book your vacation rentals: beach houses, cabins, condos &amp; more";
     this.ogTitle = `${this.property.name}`;
+
+    const ogTitle: MetaDefinition = {
+      property: "og:title",
+      content: this.ogTitle
+    }
+    const ogImageUrl: MetaDefinition = {
+      property: "og:image",
+      content: this.ogImageUrl
+    }
+    this.meta.addTags([ogTitle, ogImageUrl]);
 
     /*this.meta.updateTag({ property: 'og:title', content: this.ogTitle });
     this.meta.updateTag({ property: "og:description", content: this.ogDescription });

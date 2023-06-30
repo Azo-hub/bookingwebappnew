@@ -58,7 +58,7 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
 
     this.getEachProperty();
     this.getAllReviewsByProperty(this.propertyId);
-    this.ogImageUrl = "https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/bookingwebapp_1" + `${this.property.name}${this.property.id}` + ".jpg";
+    this.ogImageUrl = "https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/q_50/bookingwebapp_1" + `${this.property.name}${this.property.id}` + ".jpg";
     this.ogDescription = `${this.property.propertyType}` + "-Book your vacation rentals: beach houses, cabins, condos &amp; more";
     this.ogTitle = `${this.property.name}`;
 
@@ -67,7 +67,7 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     this.meta.updateTag({ property: 'og:image', content: this.ogImageUrl });
     this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` });
     this.meta.updateTag({ content: 'Angular 4 meta service' }, 'name="description"');
-
+    console.log(this.ogImageUrl);
   }
 
   getEachProperty(): void {

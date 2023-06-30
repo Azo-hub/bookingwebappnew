@@ -52,15 +52,15 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     private propertyService: PropertyService, private datePipe: DatePipe,
     private router: Router, private notificationService: NotificationService, private meta: Meta) {
 
-    const keywords: MetaDefinition = {
-      name: "keywords",
-      content: "angular2, java, javaEE, angular-universal"
+    const ogTitle: MetaDefinition = {
+      name: "og:title",
+      content: this.ogTitle
     }
-    const description: MetaDefinition = {
-      name: "description",
-      content: "This is a description"
+    const ogImageUrl: MetaDefinition = {
+      name: "og:image",
+      content: this.ogImageUrl
     }
-    this.meta.addTags([keywords, description]);
+    this.meta.addTags([ogTitle, ogImageUrl]);
   }
 
   ngOnInit(): void {
@@ -73,12 +73,11 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
     this.ogDescription = `${this.property.propertyType}` + "-Book your vacation rentals: beach houses, cabins, condos &amp; more";
     this.ogTitle = `${this.property.name}`;
 
-    this.meta.updateTag({ property: 'og:title', content: this.ogTitle });
+    /*this.meta.updateTag({ property: 'og:title', content: this.ogTitle });
     this.meta.updateTag({ property: "og:description", content: this.ogDescription });
     this.meta.updateTag({ property: 'og:image', content: this.ogImageUrl });
-    this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` });
-    this.meta.updateTag({ content: 'Angular 4 meta service' }, 'name="description"');
-    console.log(this.ogImageUrl);
+   /* this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` }); */
+
   }
 
   getEachProperty(): void {

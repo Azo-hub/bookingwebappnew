@@ -12,7 +12,7 @@ import { PropertyService } from '../service/property.service';
 import { DatePipe } from '@angular/common';
 import { Review } from '../model/review';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { Meta } from '@angular/platform-browser';
+import { Meta, MetaDefinition } from '@angular/platform-browser';
 
 
 
@@ -50,7 +50,18 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
 
   constructor(private activatedRoute: ActivatedRoute,
     private propertyService: PropertyService, private datePipe: DatePipe,
-    private router: Router, private notificationService: NotificationService, private meta: Meta) { }
+    private router: Router, private notificationService: NotificationService, private meta: Meta) {
+
+    const keywords: MetaDefinition = {
+      name: "keywords",
+      content: "angular2, java, javaEE, angular-universal"
+    }
+    const description: MetaDefinition = {
+      name: "description",
+      content: "This is a description"
+    }
+    this.meta.addTags([keywords, description]);
+  }
 
   ngOnInit(): void {
 

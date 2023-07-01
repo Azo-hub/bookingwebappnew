@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -45,9 +45,6 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
   ogDescription: string = "";
   ogTitle: string = "";
 
-
-
-
   constructor(private activatedRoute: ActivatedRoute,
     private propertyService: PropertyService, private datePipe: DatePipe,
     private router: Router, private notificationService: NotificationService, private meta: Meta) {
@@ -60,24 +57,24 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
 
     this.getEachProperty();
     this.getAllReviewsByProperty(this.propertyId);
-  /*  this.ogImageUrl = "https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/q_50/bookingwebapp_1" + `${this.property.name}${this.property.id}` + ".jpg";
-    this.ogDescription = `${this.property.propertyType}` + "-Book your vacation rentals: beach houses, cabins, condos &amp; more";
-    this.ogTitle = `${this.property.name}`;
-
-    const ogTitle: MetaDefinition = {
-      property: "og:title",
-      content: this.ogTitle
-    }
-    const ogImageUrl: MetaDefinition = {
-      property: "og:image",
-      content: this.ogImageUrl
-    }
-    this.meta.addTags([ogTitle, ogImageUrl]);
-
-    /*this.meta.updateTag({ property: 'og:title', content: this.ogTitle });
-    this.meta.updateTag({ property: "og:description", content: this.ogDescription });
-    this.meta.updateTag({ property: 'og:image', content: this.ogImageUrl });
-   /* this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` }); */
+    /*  this.ogImageUrl = "https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/q_50/bookingwebapp_1" + `${this.property.name}${this.property.id}` + ".jpg";
+      this.ogDescription = `${this.property.propertyType}` + "-Book your vacation rentals: beach houses, cabins, condos &amp; more";
+      this.ogTitle = `${this.property.name}`;
+  
+      const ogTitle: MetaDefinition = {
+        property: "og:title",
+        content: this.ogTitle
+      }
+      const ogImageUrl: MetaDefinition = {
+        property: "og:image",
+        content: this.ogImageUrl
+      }
+      this.meta.addTags([ogTitle, ogImageUrl]);
+  
+      /*this.meta.updateTag({ property: 'og:title', content: this.ogTitle });
+      this.meta.updateTag({ property: "og:description", content: this.ogDescription });
+      this.meta.updateTag({ property: 'og:image', content: this.ogImageUrl });
+     /* this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` }); */
 
   }
 
@@ -91,9 +88,7 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
         (response: Property) => {
           //this.uService.addUsersToLocalCache(response);
           this.property = response;
-
           console.log(this.property);
-
         },
         (errorResponse: HttpErrorResponse) => {
           this.sendNotification(NotificationType.ERROR, errorResponse.error.message);

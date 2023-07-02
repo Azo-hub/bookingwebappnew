@@ -281,11 +281,11 @@
                         </div>
 
                         <h3
-                            [hidden]="!property.sharedSpaces_kitchen && !property.sharedSpaces_laundryRoom && !property.sharedSpaces_outDoorParking && !property.sharedSpaces_garage && !property.sharedSpaces_balcony && !property.sharedSpaces_backyard">
+                            [hidden]="!property.sharedSpaces_laundryRoom && !property.sharedSpaces_outDoorParking && !property.sharedSpaces_garage && !property.sharedSpaces_balcony && !property.sharedSpaces_backyard">
                             <b>Shared Spaces</b>
                         </h3>
                         <div class="col-sm-6 custom-text-fix">
-                            <p [hidden]="!property.sharedSpaces_kitchen">Kitchen</p>
+                            <!--  <p [hidden]="!property.sharedSpaces_kitchen">Kitchen</p> -->
                             <p [hidden]="!property.sharedSpaces_laundryRoom">Laundry Room</p>
                             <p [hidden]="!property.sharedSpaces_outDoorParking">Outdoor Parking</p>
                             <p [hidden]="!property.sharedSpaces_garage">Garage</p>

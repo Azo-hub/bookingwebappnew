@@ -24,7 +24,7 @@ export class Property {
     public bathrooms_noOfMasterBathroom: string;
     public bathrooms_noOfPrivateBathroom: string;
     public bathrooms_noOfHalfBath: string;
-    public sharedSpaces_kitchen: string;
+    
     public sharedSpaces_laundryRoom: string;
     public sharedSpaces_outDoorParking: string;
     public sharedSpaces_garage: string;
@@ -78,10 +78,27 @@ export class Property {
     public image29: boolean;
     public image30: boolean;
 
+    public sharedSpaces_Kitchen_Refrigerator: string;
+    public sharedSpaces_Kitchen_Dishwasher: string;
+    public sharedSpaces_Kitchen_Microwave: string;
+    public sharedSpaces_Kitchen_Stove: string;
+    public sharedSpaces_Kitchen_Oven: string;
+    public sharedSpaces_Kitchen_Dishes_Utensils: string;
+    public sharedSpaces_Kitchen_Coffee_Maker: string;
+    public sharedSpaces_Kitchen_Kettle: string;
+    public sharedSpaces_Kitchen_Blender: string;
+    public sharedSpaces_Kitchen_Ice_Maker: string;
+    public sharedSpaces_Kitchen_Toaster: string;
 
-
-
-
+    public sharedSpaces_Pool_Spa_Spa_Whirlpool: string;
+    public sharedSpaces_Pool_Spa_Sauna: string;
+    public sharedSpaces_Pool_Spa_Heated_Pool: string;
+    public sharedSpaces_Pool_Spa_Indoor_Pool: string;
+    public sharedSpaces_Pool_Spa_Outdoor_Pool: string;
+    public sharedSpaces_Pool_Spa_Communal_Pool: string;
+  
+    
+  
 
     constructor() {
         this.id = 0;
@@ -104,7 +121,6 @@ export class Property {
         this.bathrooms_noOfMasterBathroom = "";
         this.bathrooms_noOfPrivateBathroom = "";
         this.bathrooms_noOfHalfBath = "";
-        this.sharedSpaces_kitchen = "";
         this.sharedSpaces_laundryRoom = "";
         this.sharedSpaces_outDoorParking = "";
         this.sharedSpaces_garage = "";
@@ -158,6 +174,25 @@ export class Property {
         this.image29 = false;
         this.image30 = false;
 
+
+        this.sharedSpaces_Kitchen_Refrigerator = "";
+        this.sharedSpaces_Kitchen_Dishwasher = "";
+        this.sharedSpaces_Kitchen_Microwave = "";
+        this.sharedSpaces_Kitchen_Stove = "";
+        this.sharedSpaces_Kitchen_Oven = "";
+        this.sharedSpaces_Kitchen_Dishes_Utensils = "";
+        this.sharedSpaces_Kitchen_Coffee_Maker = "";
+        this.sharedSpaces_Kitchen_Kettle = "";
+        this.sharedSpaces_Kitchen_Blender = "";
+        this.sharedSpaces_Kitchen_Ice_Maker = "";
+        this.sharedSpaces_Kitchen_Toaster = "";
+
+        this.sharedSpaces_Pool_Spa_Spa_Whirlpool = "";
+        this.sharedSpaces_Pool_Spa_Sauna = "";
+        this.sharedSpaces_Pool_Spa_Heated_Pool = "";
+        this.sharedSpaces_Pool_Spa_Indoor_Pool = "";
+        this.sharedSpaces_Pool_Spa_Outdoor_Pool = "";
+        this.sharedSpaces_Pool_Spa_Communal_Pool = "";
 
     }
 

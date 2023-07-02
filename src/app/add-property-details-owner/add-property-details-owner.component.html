@@ -194,25 +194,60 @@
 
                     <div class="row my-2 mx-2">
                         <div class="col-sm-12">
-                            <label class="my-2">Shared Spaces</label>
+                            <label class="my-4">Shared Spaces</label>
 
                             <div class="row">
-                                <label class="form-label">Kitchen</label>
                                 <div class="col-sm-6">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="kitchen_Refrigerator" ngModel
-                                            name="sharedSpaces_Kitchen_Refrigerator" id="kitchen_RefrigeratorCheckbox" /><label
-                                            class="form-check-label" for="kitchen_RefrigeratorCheckbox">Refrigerator</label>
+                                        <input type="checkbox" class="form-check-input" value="Outdoor Parking" ngModel
+                                            name="sharedSpaces_outDoorParking" id="outDoorParkingCheckbox" /><label
+                                            class="form-check-label" for="outDoorParkingCheckbox">Outdoor
+                                            Parking</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="Garage" ngModel
+                                            name="sharedSpaces_garage" id="garageCheckbox" /><label for="garageCheckbox"
+                                            class="form-check-label">Garage</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="Balcony" ngModel
+                                            name="sharedSpaces_balcony" id="balconyCheckbox" /><label
+                                            class="form-check-label" for="balconyCheckbox">Balcony</label>
+
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="Backyard" ngModel
+                                            name="sharedSpaces_backyard" id="backyardCheckbox" /><label
+                                            class="form-check-label" for="backyardCheckbox">Backyard</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <label class="form-label my-3">Kitchen</label>
+                                <div class="col-sm-6">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="kitchen_Refrigerator"
+                                            ngModel name="sharedSpaces_Kitchen_Refrigerator"
+                                            id="kitchen_RefrigeratorCheckbox" /><label class="form-check-label"
+                                            for="kitchen_RefrigeratorCheckbox">Refrigerator</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="kitchen_Dishwasher" ngModel
-                                            name="sharedSpaces_Kitchen_Dishwasher" id="kitchen_DishwasherCheckbox" /><label
-                                            class="form-check-label" for="kitchen_DishwasherCheckbox">Dishwasher</label>
+                                        <input type="checkbox" class="form-check-input" value="kitchen_Dishwasher"
+                                            ngModel name="sharedSpaces_Kitchen_Dishwasher"
+                                            id="kitchen_DishwasherCheckbox" /><label class="form-check-label"
+                                            for="kitchen_DishwasherCheckbox">Dishwasher</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="kitchen_Microwave" ngModel
-                                            name="sharedSpaces_Kitchen_Microwave" id="kitchen_MicrowaveCheckbox" /><label
-                                            class="form-check-label" for="kitchenMicrowaveCheckbox">Microwave</label>
+                                        <input type="checkbox" class="form-check-input" value="kitchen_Microwave"
+                                            ngModel name="sharedSpaces_Kitchen_Microwave"
+                                            id="kitchen_MicrowaveCheckbox" /><label class="form-check-label"
+                                            for="kitchenMicrowaveCheckbox">Microwave</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" value="kitchen_Stove" ngModel
@@ -225,17 +260,19 @@
                                             class="form-check-label" for="kitchen_OvenCheckbox">Oven</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="kitchen_Dishes_Utensils" ngModel
-                                            name="sharedSpaces_Kitchen_Dishes_Utensils" id="kitchen_Dishes_utensilsCheckbox" /><label
-                                            class="form-check-label" for="kitchen_Dishes_utensilsCheckbox">Dishes & utensils</label>
+                                        <input type="checkbox" class="form-check-input" value="kitchen_Dishes_Utensils"
+                                            ngModel name="sharedSpaces_Kitchen_Dishes_Utensils"
+                                            id="kitchen_Dishes_utensilsCheckbox" /><label class="form-check-label"
+                                            for="kitchen_Dishes_utensilsCheckbox">Dishes & utensils</label>
                                     </div>
 
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="kitchen_Coffee_Maker" ngModel
-                                            name="sharedSpaces_Kitchen_Coffee_Maker" id="kitchen_Coffee_makerCheckbox" /><label
-                                            class="form-check-label" for="kitchen_Coffee_makerCheckbox">Coffee maker</label>
+                                        <input type="checkbox" class="form-check-input" value="kitchen_Coffee_Maker"
+                                            ngModel name="sharedSpaces_Kitchen_Coffee_Maker"
+                                            id="kitchen_Coffee_makerCheckbox" /><label class="form-check-label"
+                                            for="kitchen_Coffee_makerCheckbox">Coffee maker</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" value="kitchen_Kettle" ngModel
@@ -248,9 +285,10 @@
                                             class="form-check-label" for="kitchen_BlenderCheckbox">Blender</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="kitchen_Ice_Maker" ngModel
-                                            name="sharedSpaces_Kitchen_Ice_Maker" id="kitchen_Ice_makerCheckbox" /><label
-                                            class="form-check-label" for="kitchen_Ice_makerCheckbox">Ice maker</label>
+                                        <input type="checkbox" class="form-check-input" value="kitchen_Ice_Maker"
+                                            ngModel name="sharedSpaces_Kitchen_Ice_Maker"
+                                            id="kitchen_Ice_makerCheckbox" /><label class="form-check-label"
+                                            for="kitchen_Ice_makerCheckbox">Ice maker</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" value="kitchen_Toaster" ngModel
@@ -262,76 +300,113 @@
 
 
                             <div class="row">
-                                <label class="form-label">Pool & spa</label>
+                                <label class="form-label my-3">Pool & spa</label>
                                 <div class="col-sm-6">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Spa_Whirlpool" ngModel
-                                            name="sharedSpaces_Pool_Spa_Spa_Whirlpool" id="pool_Spa_Spa_WhirlpoolCheckbox" /><label
-                                            class="form-check-label" for="pool_Spa_Spa_WhirlpoolCheckbox">Spa whirlpool</label>
+                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Spa_Whirlpool"
+                                            ngModel name="sharedSpaces_Pool_Spa_Spa_Whirlpool"
+                                            id="pool_Spa_Spa_WhirlpoolCheckbox" /><label class="form-check-label"
+                                            for="pool_Spa_Spa_WhirlpoolCheckbox">Spa whirlpool</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" value="pool_Spa_Sauna" ngModel
-                                            name="sharedSpaces_Pool_Spa_Sauna" id="pool_Spa_SaunaCheckbox" /><label class="form-check-label"
-                                            for="pool_Spa_SaunaCheckbox">Sauna</label>
+                                            name="sharedSpaces_Pool_Spa_Sauna" id="pool_Spa_SaunaCheckbox" /><label
+                                            class="form-check-label" for="pool_Spa_SaunaCheckbox">Sauna</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Heated_Pool" ngModel
-                                            name="sharedSpaces_Pool_Spa_Heated_Pool" id="pool_Spa_Heated_PoolCheckbox" /><label class="form-check-label"
+                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Heated_Pool"
+                                            ngModel name="sharedSpaces_Pool_Spa_Heated_Pool"
+                                            id="pool_Spa_Heated_PoolCheckbox" /><label class="form-check-label"
                                             for="pool_Spa_Heated_PoolCheckbox">Heated pool</label>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Indoor_Pool" ngModel
-                                            name="sharedSpaces_Pool_Spa_Indoor_Pool" id="pool_Spa_Indoor_PoolCheckbox" /><label
-                                            class="form-check-label" for="pool_Spa_Indoor_PoolCheckbox">Indoor pool</label>
+                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Indoor_Pool"
+                                            ngModel name="sharedSpaces_Pool_Spa_Indoor_Pool"
+                                            id="pool_Spa_Indoor_PoolCheckbox" /><label class="form-check-label"
+                                            for="pool_Spa_Indoor_PoolCheckbox">Indoor pool</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Outdoor_Pool" ngModel
-                                            name="sharedSpaces_Pool_Spa_Outdoor_Pool" id="pool_Spa_Outdoor_PoolCheckbox" /><label class="form-check-label"
+                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Outdoor_Pool"
+                                            ngModel name="sharedSpaces_Pool_Spa_Outdoor_Pool"
+                                            id="pool_Spa_Outdoor_PoolCheckbox" /><label class="form-check-label"
                                             for="pool_Spa_Outdoor_PoolCheckbox">Outdoor pool</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Communal_Pool" ngModel
-                                            name="sharedSpaces_Pool_Spa_Communal_Pool" id="pool_Spa_Communal_PoolCheckbox" /><label class="form-check-label"
+                                        <input type="checkbox" class="form-check-input" value="pool_Spa_Communal_Pool"
+                                            ngModel name="sharedSpaces_Pool_Spa_Communal_Pool"
+                                            id="pool_Spa_Communal_PoolCheckbox" /><label class="form-check-label"
                                             for="pool_Spa_Communal_PoolCheckbox">Communal pool</label>
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <label class="form-label my-3">Outside</label>
+                                <div class="col-sm-6">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input"
+                                            value="outside_Outdoor_Furniture" ngModel
+                                            name="sharedSpaces_Outside_Outdoor_Furniture"
+                                            id="outside_Outdoor_FurnitureCheckbox" /><label class="form-check-label"
+                                            for="outside_Outdoor_FurnitureCheckbox">Outdoor furniture</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="outside_Beach_Chairs"
+                                            ngModel name="sharedSpaces_Outside_Beach_Chairs"
+                                            id="outside_Beach_ChairsCheckbox" /><label class="form-check-label"
+                                            for="outside_Beach_ChairsCheckbox">Beach chairs</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="outside_Bicycles" ngModel
+                                            name="sharedSpaces_Outside_Bicycles" id="outside_BicyclesCheckbox" /><label
+                                            class="form-check-label" for="outside_BicyclesCheckbox">Bicycles</label>
+                                    </div>
 
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Laudry Room" ngModel
-                                    name="sharedSpaces_laundryRoom" id="laundryRoomCheckbox" />
-                                <label class="form-check-label" for="laundryRoomCheckbox">Laudry Room</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="outside_Golf" ngModel
+                                            name="sharedSpaces_Outside_Golf" id="outside_GolfCheckbox" /><label
+                                            class="form-check-label" for="outside_GolfCheckbox">Golf</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="outside_Tennis" ngModel
+                                            name="sharedSpaces_Outside_Tennis" id="outside_TennisCheckbox" /><label
+                                            class="form-check-label" for="outside_TennisCheckbox">Tennis</label>
+                                    </div>
+
+                                </div>
                             </div>
 
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Outdoor Parking" ngModel
-                                    name="sharedSpaces_outDoorParking" id="outDoorParkingCheckbox" /><label
-                                    class="form-check-label" for="outDoorParkingCheckbox">Outdoor Parking</label>
+                            <div class="row">
+                                <label class="form-label my-3">Laundry</label>
+                                <div class="col-sm-6">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input"
+                                            value="laundry_Washing_Furniture" ngModel
+                                            name="sharedSpaces_Laundry_Washing_Furniture"
+                                            id="laundry_Washing_FurnitureCheckbox" /><label class="form-check-label"
+                                            for="laundry_Washing_FurnitureCheckbox">Washing furniture</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="laundry_Clothes_Dryer"
+                                            ngModel name="sharedSpaces_Laundry_Clothes_Dryer"
+                                            id="laundry_Clothes_DryerCheckbox" /><label class="form-check-label"
+                                            for="laundry_Clothes_DryerCheckbox">Clothes dryer</label>
+                                    </div>
+
+
+                                </div>
+
                             </div>
 
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Garage" ngModel
-                                    name="sharedSpaces_garage" id="garageCheckbox" /><label for="garageCheckbox"
-                                    class="form-check-label">Garage</label>
-                            </div>
 
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Balcony" ngModel
-                                    name="sharedSpaces_balcony" id="balconyCheckbox" /><label class="form-check-label"
-                                    for="balconyCheckbox">Balcony</label>
 
-                            </div>
 
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Backyard" ngModel
-                                    name="sharedSpaces_backyard" id="backyardCheckbox" /><label class="form-check-label"
-                                    for="backyardCheckbox">Backyard</label>
-                            </div>
 
 
                         </div>
@@ -346,6 +421,12 @@
                                 <input type="checkbox" class="form-check-input" value="Wifi" ngModel
                                     name="amenities_wifi" id="WifiCheckbox" /><label class="form-check-label"
                                     for="WifiCheckbox">Wifi</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" value="Wifi" ngModel
+                                    name="amenities_Internet" id="InternetCheckbox" /><label class="form-check-label"
+                                    for="InternetCheckbox">Internet</label>
                             </div>
 
                             <div class="form-check">
@@ -400,13 +481,6 @@
                         <div class="col-sm-6">
 
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Outdoor Swimming Pool" ngModel
-                                    name="amenities_outdoorSwimmingPool" id="outdoorSwimmingPoolCheckbox" /><label
-                                    class="form-check-label" for="outdoorSwimmingPoolCheckbox">Outdoor Swimming
-                                    Pool</label>
-                            </div>
-
-                            <div class="form-check">
                                 <input type="checkbox" class="form-check-input" value="Iron & Board" ngModel
                                     name="amenities_ironBoard" id="iron&BoardCheckbox" /><label class="form-check-label"
                                     for="iron&BoardCheckbox">Iron & Board</label>
@@ -419,41 +493,49 @@
                             </div>
 
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Microwave" ngModel
-                                    name="amenities_microwave" id="microwaveCheckbox" /><label class="form-check-label"
-                                    for="microwaveCheckbox">Microwave</label>
-                            </div>
-
-                            <div class="form-check">
                                 <input type="checkbox" class="form-check-input" value="Board Games" ngModel
                                     name="amenities_boardGames" id="boardGamesCheckbox" /><label
                                     class="form-check-label" for="boardGamesCheckbox">Board Games</label>
                             </div>
 
+
+
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Toaster" ngModel
-                                    name="amenities_toaster" id="toasterCheckbox" /><label class="form-check-label"
-                                    for="toasterCheckbox">Toaster</label>
+                                <input type="checkbox" class="form-check-input" value="towels" ngModel
+                                    name="amenities_Towels" id="towelsCheckbox" /><label class="form-check-label"
+                                    for="towelsCheckbox">Towels</label>
                             </div>
 
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Coffee Maker" ngModel
-                                    name="amenities_coffeeMaker" id="coffeeMakerCheckbox" /><label
-                                    class="form-check-label" for="coffeeMakerCheckbox">Coffee Maker</label>
+                                <input type="checkbox" class="form-check-input" value="linens" ngModel
+                                    name="amenities_Linens" id="linensCheckbox" /><label class="form-check-label"
+                                    for="linensCheckbox">Linens</label>
                             </div>
 
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" value="Stove" ngModel
-                                    name="amenities_stove" id="stoveCheckbox" /><label class="form-check-label"
-                                    for="stoveCheckbox">Stove</label>
+                                <input type="checkbox" class="form-check-input" value="air_Conditioning" ngModel
+                                    name="amenities_Air_Conditioning" id="air_ConditioningCheckbox" /><label
+                                    class="form-check-label" for="air_ConditioningCheckbox">Air conditioning</label>
                             </div>
 
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" value="heating" ngModel
+                                    name="amenities_Heating" id="heatingCheckbox" /><label class="form-check-label"
+                                    for="heatingCheckbox">Heating</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" value="fitness_Room_Equipment" ngModel
+                                    name="amenities_Fitness_Room_Equipment" id="fitness_Room_EquipmentCheckbox" /><label
+                                    class="form-check-label" for="fitness_Room_EquipmentCheckbox">Fitness
+                                    room/equipment</label>
+                            </div>
 
                         </div>
 
                     </div>
 
-                    <div class="row my-2 mx-2">
+                    <div class="row mt-4 mb-2 mx-2">
                         <div class="col-sm-12">
                             <textarea rows="10" class="form-control" placeholder="Property Description" ngModel
                                 name="description" #descriptionInput="ngModel"></textarea>

@@ -24,7 +24,7 @@ export class Property {
     public bathrooms_noOfMasterBathroom: string;
     public bathrooms_noOfPrivateBathroom: string;
     public bathrooms_noOfHalfBath: string;
-    
+
     public sharedSpaces_laundryRoom: string;
     public sharedSpaces_outDoorParking: string;
     public sharedSpaces_garage: string;
@@ -46,6 +46,7 @@ export class Property {
     public amenities_toaster: string;
     public amenities_coffeeMaker: string;
     public amenities_stove: string;
+    public amenities_Internet: string;
     public description: string;
     public image1: boolean;
     public image2: boolean;
@@ -96,9 +97,20 @@ export class Property {
     public sharedSpaces_Pool_Spa_Indoor_Pool: string;
     public sharedSpaces_Pool_Spa_Outdoor_Pool: string;
     public sharedSpaces_Pool_Spa_Communal_Pool: string;
-  
-    
-  
+
+    public sharedSpaces_Outside_Outdoor_Furniture: string;
+    public sharedSpaces_Outside_Beach_Chairs: string;
+    public sharedSpaces_Outside_Bicycles: string;
+    public sharedSpaces_Outside_Golf: string;
+    public sharedSpaces_Outside_Tennis: string;
+
+    public amenities_Towels: string;
+    public amenities_Linens: string;
+    public amenities_Air_Conditioning: string;
+    public amenities_Heating: string;
+    public amenities_Fitness_Room_Equipment: string;
+
+
 
     constructor() {
         this.id = 0;
@@ -142,6 +154,7 @@ export class Property {
         this.amenities_toaster = "";
         this.amenities_coffeeMaker = "";
         this.amenities_stove = "";
+        this.amenities_Internet = "";
         this.description = "";
         this.image1 = false;
         this.image2 = false;
@@ -193,6 +206,19 @@ export class Property {
         this.sharedSpaces_Pool_Spa_Indoor_Pool = "";
         this.sharedSpaces_Pool_Spa_Outdoor_Pool = "";
         this.sharedSpaces_Pool_Spa_Communal_Pool = "";
+
+        this.sharedSpaces_Outside_Outdoor_Furniture = "";
+        this.sharedSpaces_Outside_Beach_Chairs = "";
+        this.sharedSpaces_Outside_Bicycles = "";
+        this.sharedSpaces_Outside_Golf = "";
+        this.sharedSpaces_Outside_Tennis = "";
+
+        this.amenities_Towels = "";
+        this.amenities_Linens = "";
+        this.amenities_Air_Conditioning = "";
+        this.amenities_Heating = "";
+        this.amenities_Fitness_Room_Equipment = "";
+
 
     }
 

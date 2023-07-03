@@ -41,11 +41,7 @@ export class Property {
     public amenities_outdoorSwimmingPool: string;
     public amenities_ironBoard: string;
     public amenities_satelliteOrCable: string;
-    public amenities_microwave: string;
     public amenities_boardGames: string;
-    public amenities_toaster: string;
-    public amenities_coffeeMaker: string;
-    public amenities_stove: string;
     public amenities_Internet: string;
     public description: string;
     public image1: boolean;
@@ -110,6 +106,9 @@ export class Property {
     public amenities_Heating: string;
     public amenities_Fitness_Room_Equipment: string;
 
+    public sharedSpaces_Laundry_Washing_Furniture: string;
+    public sharedSpaces_Laundry_Clothes_Dryer: string;
+
 
 
     constructor() {
@@ -149,11 +148,7 @@ export class Property {
         this.amenities_outdoorSwimmingPool = "";
         this.amenities_ironBoard = "";
         this.amenities_satelliteOrCable = "";
-        this.amenities_microwave = "";
         this.amenities_boardGames = "";
-        this.amenities_toaster = "";
-        this.amenities_coffeeMaker = "";
-        this.amenities_stove = "";
         this.amenities_Internet = "";
         this.description = "";
         this.image1 = false;
@@ -218,6 +213,9 @@ export class Property {
         this.amenities_Air_Conditioning = "";
         this.amenities_Heating = "";
         this.amenities_Fitness_Room_Equipment = "";
+
+        this.sharedSpaces_Laundry_Washing_Furniture = "";
+        this.sharedSpaces_Laundry_Clothes_Dryer = "";
 
 
     }

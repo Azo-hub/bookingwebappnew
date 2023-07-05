@@ -128,6 +128,12 @@ export class AddPropertyDetailsOwnerComponent implements OnInit, OnDestroy {
     { value: "District of Columbia", label: "District of Columbia" }
   ]
 
+  canadaProvinces = [{ value: "Ontario", label: "Ontario" }, { value: "Quebec", label: "Quebec" },
+  { value: "Nova Scotia", label: "Nova Scotia" }, { value: "New Brunswick", label: "New Brunswick" },
+  { value: "Manitoba", label: "Manitoba" }, { value: "British Columbia", label: "British Columbia" },
+  { value: "Prince Edward Island", label: "Prince Edward Island" }, { value: "Saskatchewan", label: "Saskatchewan" },
+  { value: "Alberta", label: "Alberta" }, { value: "Newfoundland and Labrador", label: "Newfoundland and Labrador" }
+  ]
 
 
   constructor(private propertyService: PropertyService, private authenticationService: AuthenticationService,

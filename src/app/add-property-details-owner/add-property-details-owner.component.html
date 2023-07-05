@@ -123,11 +123,13 @@
                     </div>
 
                     <div class="row my-2 mx-2">
-                        <label class="text-muted my-1">States</label>
+                        <label class="text-muted my-1">States/Provinces</label>
                         <div class="col-sm-12" style="display: flex; flex-direction: row;">
                             <select required class="form-control fa" placeholder="State" ngModel name="propertyState"
                                 #propertyStateInput="ngModel" style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;">
                                 <option *ngFor="let state of states" [ngValue]="state.value">{{state.label}}</option>
+                                <option *ngFor="let province of canadaProvinces" [ngValue]="province.value">
+                                    {{province.label}}</option>
                             </select>
 
 

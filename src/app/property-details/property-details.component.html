@@ -285,17 +285,107 @@
                             <b>Shared Spaces</b>
                         </h3>
                         <div class="col-sm-6 custom-text-fix">
-                            <!--  <p [hidden]="!property.sharedSpaces_kitchen">Kitchen</p> -->
                             <p [hidden]="!property.sharedSpaces_laundryRoom">Laundry Room</p>
                             <p [hidden]="!property.sharedSpaces_outDoorParking">Outdoor Parking</p>
                             <p [hidden]="!property.sharedSpaces_garage">Garage</p>
+                            <p [hidden]="!property.sharedSpaces_balcony">Balcony</p>
+
                         </div>
 
                         <div class="col-sm-6 custom-text-fix">
-                            <p [hidden]="!property.sharedSpaces_balcony">Balcony</p>
                             <p [hidden]="!property.sharedSpaces_backyard">Backyard</p>
 
                         </div>
+
+
+                        <div class="row mt-2">
+                            <h4 [hidden]="!property.sharedSpaces_Kitchen_Refrigerator &&
+                                     !property.sharedSpaces_Kitchen_Dishwasher &&
+                                      !property.sharedSpaces_Kitchen_Microwave &&
+                                       !property.sharedSpaces_Kitchen_Stove &&
+                                        !property.sharedSpaces_Kitchen_Oven &&
+                                        !property.sharedSpaces_Kitchen_Dishes_Utensils &&
+                                        !property.sharedSpaces_Kitchen_Coffee_Maker &&
+                                        !property.sharedSpaces_Kitchen_Kettle &&
+                                        !property.sharedSpaces_Kitchen_Blender &&
+                                        !property.sharedSpaces_Kitchen_Ice_Maker &&
+                                        !property.sharedSpaces_Kitchen_Toaster">
+                                <b>Kitchen</b>
+                            </h4>
+                            <div class="col-sm-6 custom-text-fix">
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Refrigerator">Refrigerator</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Dishwasher">Dishwasher</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Microwave">Microwave</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Stove">Stove</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Oven">Oven</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Dishes_Utensils">Dishes & utensils</p>
+
+                            </div>
+                            <div class="col-sm-6 custom-text-fix">
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Coffee_Maker">Coffee maker</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Kettle">Kettle</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Blender">Blender</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Ice_Maker">Ice maker</p>
+                                <p [hidden]="!property.sharedSpaces_Kitchen_Toaster">Toaster</p>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row mt-2">
+                            <h4 [hidden]="!property.sharedSpaces_Pool_Spa_Spa_Whirlpool &&
+                                     !property.sharedSpaces_Pool_Spa_Sauna &&
+                                      !property.sharedSpaces_Pool_Spa_Heated_Pool &&
+                                       !property.sharedSpaces_Pool_Spa_Indoor_Pool &&
+                                        !property.sharedSpaces_Pool_Spa_Outdoor_Pool &&
+                                         !property.sharedSpaces_Pool_Spa_Communal_Pool">
+                                <b>Pool & spa</b>
+                            </h4>
+                            <div class="col-sm-6 custom-text-fix">
+                                <p [hidden]="!property.sharedSpaces_Pool_Spa_Spa_Whirlpool">Spa whirlpool</p>
+                                <p [hidden]="!property.sharedSpaces_Pool_Spa_Sauna">Sauna</p>
+                                <p [hidden]="!property.sharedSpaces_Pool_Spa_Heated_Pool">Heated pool</p>
+
+                            </div>
+                            <div class="col-sm-6 custom-text-fix">
+                                <p [hidden]="!property.sharedSpaces_Pool_Spa_Indoor_Pool">Indoor pool</p>
+                                <p [hidden]="!property.sharedSpaces_Pool_Spa_Outdoor_Pool">Outdoor pool</p>
+                                <p [hidden]="!property.sharedSpaces_Pool_Spa_Communal_Pool">Communal pool</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row mt-2">
+                            <h4 [hidden]="!property.sharedSpaces_Outside_Outdoor_Furniture &&
+                                     !property.sharedSpaces_Outside_Beach_Chairs &&
+                                      !property.sharedSpaces_Outside_Bicycles &&
+                                       !property.sharedSpaces_Laundry_Clothes_Dryer &&
+                                        !property.sharedSpaces_Outside_Golf &&
+                                         !property.sharedSpaces_Outside_Tennis &&
+                                         !property.sharedSpaces_Laundry_Washing_Furniture">
+                                <b>Outside</b>
+                            </h4>
+                            <div class="col-sm-6 custom-text-fix">
+                                <p [hidden]="!property.sharedSpaces_Outside_Outdoor_Furniture">Outdoor furniture</p>
+                                <p [hidden]="!property.sharedSpaces_Outside_Beach_Chairs">Beach chairs</p>
+                                <p [hidden]="!property.sharedSpaces_Outside_Bicycles">Bicycles</p>
+                                <p [hidden]="!property.sharedSpaces_Laundry_Clothes_Dryer">Clothes dryer</p>
+
+                            </div>
+                            <div class="col-sm-6 custom-text-fix">
+                                <p [hidden]="!property.sharedSpaces_Outside_Golf">Golf</p>
+                                <p [hidden]="!property.sharedSpaces_Outside_Tennis">Tennis</p>
+                                <p [hidden]="!property.sharedSpaces_Laundry_Washing_Furniture">Washing furniture</p>
+
+                            </div>
+                        </div>
+
+
+
 
                         <h3><b>Amenities</b></h3>
                         <div class="col-sm-6 custom-text-fix">
@@ -311,6 +401,8 @@
                             <p [hidden]="!property.amenities_LEDTV"><span class="fa fa-home"></span>&nbsp;LEDTV</p>
                             <p [hidden]="!property.amenities_grill"><span class="fa fa-home"></span>&nbsp;Grill</p>
                             <p [hidden]="!property.amenities_parking"><span class="fa fa-home"></span>&nbsp;Parking</p>
+                            <p [hidden]="!property.amenities_Linens"><span class="fa fa-home"></span>&nbsp;Linens</p>
+                            <p [hidden]="!property.amenities_Heating"><span class="fa fa-home"></span>&nbsp;Heating</p>
                         </div>
 
                         <div class="col-sm-6 custom-text-fix">
@@ -320,14 +412,17 @@
                                 Board</p>
                             <p [hidden]="!property.amenities_satelliteOrCable"><span
                                     class="fa fa-home"></span>&nbsp;Satellite or Cable</p>
-                            <p [hidden]="!property.amenities_microwave"><span class="fa fa-home"></span>&nbsp;Microwave
+                            <p [hidden]="!property.amenities_Internet"><span class="fa fa-home"></span>&nbsp;Internet
                             </p>
                             <p [hidden]="!property.amenities_boardGames"><span class="fa fa-home"></span>&nbsp;Board
-                                Games</p>
-                            <p [hidden]="!property.amenities_toaster"><span class="fa fa-home"></span>&nbsp;Toaster</p>
-                            <p [hidden]="!property.amenities_coffeeMaker"><span class="fa fa-home"></span>&nbsp;Coffee
-                                maker</p>
-                            <p [hidden]="!property.amenities_stove"><span class="fa fa-home"></span>&nbsp;Stove</p>
+                                Games
+                            </p>
+                            <p [hidden]="!property.amenities_Air_Conditioning"><span class="fa fa-home"></span>&nbsp;Air
+                                conditioning
+                            </p>
+                            <p [hidden]="!property.amenities_Fitness_Room_Equipment"><span
+                                    class="fa fa-home"></span>&nbsp;Fitness room/equipment
+                            </p>
 
                         </div>
 
@@ -692,11 +787,11 @@
                         booking.
                     </p>
                     <p class="custom-text-fix">
-                        <b>80% refund of booking amount payable</b> if you cancel at
-                        least 5 days before check-in date.
+                        <b>50% refund of booking amount payable</b> if you cancel at
+                        least 30 days before check-in date.
                     </p>
                     <p class="custom-text-fix">
-                        <b>No refund</b> if you cancel Four (4) days before check-in date.
+                        <b>No refund</b> if you cancel less than 30 days before check-in date.
                     </p>
                     <p class="custom-text-fix">Please be assured you are satisfied with the cancellation Policy for this
                         booking, which will also apply if you have to cancel due to Covid-19 or any related issues.</p>

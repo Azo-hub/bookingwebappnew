@@ -96,6 +96,9 @@ export class AddPropertyDetailsOwnerComponent implements OnInit, OnDestroy {
   reviews: Review[] = [];
   showLoadingDone: boolean;
   showReview: boolean = false;
+  showUsa: boolean = false;
+  showCanada: boolean = false;
+  showAruba: boolean = false;
 
 
   states = [
@@ -133,6 +136,11 @@ export class AddPropertyDetailsOwnerComponent implements OnInit, OnDestroy {
   { value: "Manitoba", label: "Manitoba" }, { value: "British Columbia", label: "British Columbia" },
   { value: "Prince Edward Island", label: "Prince Edward Island" }, { value: "Saskatchewan", label: "Saskatchewan" },
   { value: "Alberta", label: "Alberta" }, { value: "Newfoundland and Labrador", label: "Newfoundland and Labrador" }
+  ]
+
+  arubaDistricts = [{ value: "Noord", label: "Noord" }, { value: "Oranjestad", label: "Oranjestad" },
+  { value: "Paradera", label: "Paradera" }, { value: "San Nicolaas", label: "San Nicolaas" },
+  { value: "Santa Cruz", label: "Santa Cruz" }, { value: "Savaneta", label: "Savaneta" }
   ]
 
 
@@ -176,7 +184,24 @@ export class AddPropertyDetailsOwnerComponent implements OnInit, OnDestroy {
   }
 
 
+  onCountrtySelected(propertyCountryInput: string): void {
+    if (propertyCountryInput === "United State of America") {
+      this.showAruba = false;
+      this.showCanada = false;
+      this.showUsa = true;
+    }
+    else if (propertyCountryInput === "Canada") {
+      this.showUsa = false;
+      this.showAruba = false;
+      this.showCanada = true;
+    }
+    else if (propertyCountryInput === "Aruba") {
+      this.showUsa = false;
+      this.showCanada = false;
+      this.showAruba = true;
+    }
 
+  }
 
   imageUploadDone(): void {
     this.showImageUpload = false;

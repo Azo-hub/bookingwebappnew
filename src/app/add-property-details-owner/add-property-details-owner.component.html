@@ -95,16 +95,39 @@
 
                 <div class="card my-5 card-fix">
 
-                    <div class="row my-2 mx-2 gy-4">
-                        <div class="col-sm-6" style="display: flex; flex-direction: row;">
-                            <input type="text" required class="form-control fa" placeholder="Address Line 1" ngModel
-                                name="propertyAddress1" #propertyAddress1Input="ngModel"
-                                style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;" />
+                    <div class="row my-2 mx-2">
+
+                        <label class="text-muted my-1">Country</label>
+                        <div class="col-sm-12" style="display: flex; flex-direction: row;">
+
+                            <select required class="form-control fa"
+                                (change)="onCountrtySelected(propertyCountryInput.value)" placeholder="&#xF041; Country"
+                                ngModel name="propertyCountry" #propertyCountryInput="ngModel"
+                                style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;">
+                                <option value="United State of America">U.S.A.</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Aruba">Aruba</option>
+                            </select>
+
                         </div>
-                        <div class="col-sm-6" style="display: flex; flex-direction: row;">
-                            <input type="text" class="form-control fa" placeholder="Address Line 2" ngModel
-                                name="propertyAddress2" #propertyAddress2Input="ngModel"
-                                style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;" />
+                    </div>
+
+                    <div class="row my-2 mx-2">
+                        <label class="text-muted my-1">States/Provinces</label>
+                        <div class="col-sm-12" style="display: flex; flex-direction: row;">
+                            <select required class="form-control fa" placeholder="State" ngModel name="propertyState"
+                                #propertyStateInput="ngModel" style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;">
+                                <option [hidden]="showUsa === false" *ngFor="let state of states"
+                                    [ngValue]="state.value">
+                                    {{state.label}}</option>
+                                <option [hidden]="showCanada === false" *ngFor="let province of canadaProvinces"
+                                    [ngValue]="province.value">
+                                    {{province.label}}</option>
+                                <option [hidden]="showAruba === false" *ngFor="let district of arubaDistricts"
+                                    [ngValue]="district.value">
+                                    {{district.label}}</option>
+                            </select>
+
 
                         </div>
                     </div>
@@ -122,30 +145,17 @@
                         </div>
                     </div>
 
-                    <div class="row my-2 mx-2">
-                        <label class="text-muted my-1">States/Provinces</label>
-                        <div class="col-sm-12" style="display: flex; flex-direction: row;">
-                            <select required class="form-control fa" placeholder="State" ngModel name="propertyState"
-                                #propertyStateInput="ngModel" style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;">
-                                <option *ngFor="let state of states" [ngValue]="state.value">{{state.label}}</option>
-                                <option *ngFor="let province of canadaProvinces" [ngValue]="province.value">
-                                    {{province.label}}</option>
-                            </select>
 
-
+                    <div class="row my-2 mx-2 gy-4">
+                        <div class="col-sm-6" style="display: flex; flex-direction: row;">
+                            <input type="text" required class="form-control fa" placeholder="Address Line 1" ngModel
+                                name="propertyAddress1" #propertyAddress1Input="ngModel"
+                                style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;" />
                         </div>
-                    </div>
-
-                    <div class="row my-2 mx-2">
-
-                        <label class="text-muted my-1">Country</label>
-                        <div class="col-sm-12" style="display: flex; flex-direction: row;">
-
-                            <select required class="form-control fa" placeholder="&#xF041; Country" ngModel
-                                name="propertyCountry" #propertyCountryInput="ngModel"
-                                style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;">
-                                <option value="United State of America">U.S.A.</option>
-                            </select>
+                        <div class="col-sm-6" style="display: flex; flex-direction: row;">
+                            <input type="text" class="form-control fa" placeholder="Address Line 2" ngModel
+                                name="propertyAddress2" #propertyAddress2Input="ngModel"
+                                style="flex-grow: 1; flex-shrink: 1; flex-basis: auto;" />
 
                         </div>
                     </div>

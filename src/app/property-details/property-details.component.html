@@ -876,14 +876,15 @@
                             <tr>
                                 <td>
                                     <input class="form-control fa mb-4" [(ngModel)]="checkInDate"
-                                        placeholder="&#xF274; Check-in" required [min]="currentDate | date:'yyyy-MM-dd'"
-                                        [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4">
+                                        [owlDateTimeFilter]="myFilter1" placeholder="&#xF274; Check-in" required
+                                        [min]="currentDate | date:'yyyy-MM-dd'" [owlDateTimeTrigger]="dt4"
+                                        [owlDateTime]="dt4">
                                     <owl-date-time [pickerType]="'calendar'" #dt4></owl-date-time>
 
                                 </td>
                                 <td>
                                     <input class="form-control fa mb-4" [(ngModel)]="checkOutDate"
-                                        placeholder="&#xF274; Check-out" required
+                                        [owlDateTimeFilter]="myFilter2" placeholder="&#xF274; Check-out" required
                                         [min]="currentDate | date:'yyyy-MM-dd'" [owlDateTimeTrigger]="dt5"
                                         [owlDateTime]="dt5">
                                     <owl-date-time [pickerType]="'calendar'" #dt5></owl-date-time>

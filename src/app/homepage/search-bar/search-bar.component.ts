@@ -31,6 +31,8 @@ export class SearchBarComponent implements OnInit, OnDestroy {
 
   }
 
+  
+
 
   onCheckDateAvailability(): void {
     if (!this.authenticationService.isUserLoggedIn()) {

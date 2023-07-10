@@ -2,7 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, OnDestroy, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Subscription, findIndex } from 'rxjs';
 import { NotificationType } from '../enum/notification-type.enum';
 import { CheckInAndOutDate } from '../model/checkInAndOutDate';
 import { CustomHttpResponse } from '../model/custom-http-response';
@@ -44,6 +44,10 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
   ogImageUrl: string = "";
   ogDescription: string = "";
   ogTitle: string = "";
+  bookedCheckInAndOutDate: CheckInAndOutDate[] = [];
+  bookedCheckInDay: any[] = [];
+  bookedCheckOutDay: any[] = [];
+
 
   constructor(private activatedRoute: ActivatedRoute,
     private propertyService: PropertyService, private datePipe: DatePipe,
@@ -57,6 +61,7 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
 
     this.getEachProperty();
     this.getAllReviewsByProperty(this.propertyId);
+    this.getCheckInAndOutDate();
     /*  this.ogImageUrl = "https://res.cloudinary.com/valencedirectbookingrentals/image/upload/c_fill/q_50/bookingwebapp_1" + `${this.property.name}${this.property.id}` + ".jpg";
       this.ogDescription = `${this.property.propertyType}` + "-Book your vacation rentals: beach houses, cabins, condos &amp; more";
       this.ogTitle = `${this.property.name}`;
@@ -77,6 +82,53 @@ export class PropertyDetailsComponent implements OnInit, OnDestroy {
      /* this.meta.updateTag({ property: 'og:url', content: `https://www.valencedirectbookingrentals.com/propertydetails/${this.property.id}` }); */
 
   }
+
+
+  myFilter1 = (d: Date): boolean => {
+    //const day = d.getDay();
+    for (const bookedCheckInDate of this.bookedCheckInAndOutDate) {
+      const d2 = new Date(bookedCheckInDate.checkInDate);
+      this.bookedCheckInDay.push(d2);
+
+    }
+
+    return this.bookedCheckInDay.findIndex((value) => d.getDate() === value.getDate()) === -1;
+
+  }
+
+  myFilter2 = (d: Date): boolean => {
+    //const day = d.getDay();
+    for (const bookedCheckOutDate of this.bookedCheckInAndOutDate) {
+      const d2 = new Date(bookedCheckOutDate.checkOutDate);
+      this.bookedCheckOutDay.push(d2);
+
+    }
+
+    return this.bookedCheckOutDay.findIndex((value) => d.getDate() === value.getDate()) === -1;
+
+  }
+
+  getCheckInAndOutDate(): void {
+
+    const formData = new FormData();
+    formData.append("propertyId", this.propertyId);
+
+    this.subscriptions.push(
+      this.propertyService.getCheckInAndOutDate(formData).subscribe(
+        (response: CheckInAndOutDate[]) => {
+          this.bookedCheckInAndOutDate = response;
+
+        },
+        (error: HttpErrorResponse) => {
+          this.sendNotification(NotificationType.ERROR, error.error.message);
+
+        }
+
+
+      )
+    );
+  }
+
 
   getEachProperty(): void {
 

@@ -37,6 +37,11 @@ export class PropertyService {
     return this.http.post<Property>(`${this.host}/eachPropertyById`, formData);
   }
 
+  getCheckInAndOutDate(formData: FormData): Observable<CheckInAndOutDate[]> {
+    return this.http.post<CheckInAndOutDate[]>
+      (`${this.host}/getCheckInAndOutDateByProperty`, formData);
+  }
+
   checkPropertyAvailability(formData: FormData): Observable<CustomHttpResponse> {
     return this.http.post<CustomHttpResponse>
       (`${this.host}/checkPropertyAvailability`, formData);

@@ -49,6 +49,10 @@ import { SupportComponent } from './support/support.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { PropertyOwnerInfoComponent } from './property-owner-info/property-owner-info.component';
 import { ContactPropertyOwnerComponent } from './contact-property-owner/contact-property-owner.component';
+import { SharethisAngularModule } from 'sharethis-angular';
+
+
+
 
 
 
@@ -87,7 +91,7 @@ import { ContactPropertyOwnerComponent } from './contact-property-owner/contact-
     ContactPropertyOwnerComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     OwlDateTimeModule,
@@ -97,7 +101,9 @@ import { ContactPropertyOwnerComponent } from './contact-property-owner/contact-
     NotificationModule,
     FormsModule,
     ReactiveFormsModule,
-    MatStepperModule
+    MatStepperModule,
+    SharethisAngularModule
+
 
   ],
   providers: [DatePipe, AuthenticationService, UserService, NotificationService,
@@ -106,3 +112,5 @@ import { ContactPropertyOwnerComponent } from './contact-property-owner/contact-
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
